@@ -1,0 +1,14 @@
+<div class="border-start m-5 ">
+<h5 class="p-3 mb-2 bg-secondary text-white"><%= @answer %></h5>
+<h4 class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis"><%= if @answer == 'I am going to work'
+      'Great!'
+    elsif @answer.include?('?')
+      'Silly question, get dressed and go to work!'
+      else
+      "I don't care, get dressed and go to work!"
+    end
+%></h4>
+</div>
+
+<br>
+<a class="m-5"></a><%= link_to 'Ask again', '/ask' %>
